@@ -5,7 +5,7 @@ Single-file HTML website for **Coastline Tints** — automotive, residential, co
 ## Features
 
 - Full-screen hero slideshow with Ken Burns zoom and staggered text animations
-- Interactive **tint visualizer** — a real vehicle photo with clip-path window masking; pick a VLT shade (70% / 50% / 35% / 20% / 5%) and watch the glass change live
+- Prominent **Get a Free Quote** box — in the hero on desktop, its own section on mobile — plus a full contact form
 - Reactive particle background that responds to mouse movement and scroll
 - Scroll-reveal animations, animated stat counters, testimonial slider, gallery lightbox
 - Mobile-first responsive layout with hamburger menu

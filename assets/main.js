@@ -146,20 +146,10 @@
   }
   addEventListener("keydown", e => { if (e.key === "Escape") { closeLb(); setMenu(false); } });
 
-  /* ---------- quote forms -> mailto ---------- */
-  document.querySelectorAll(".quote-form").forEach(form => form.addEventListener("submit", e => {
-    e.preventDefault();
-    const v = n => form.elements[n] ? form.elements[n].value : "";
-    const body = [
-      "Name: " + v("name"),
-      "Phone: " + v("phone"),
-      "Email: " + v("email"),
-      "Service: " + v("service"),
-      "", v("message")
-    ].join("\n");
-    location.href = "mailto:Coastlinetints@coastlinetints.com"
-      + "?subject=" + encodeURIComponent("Quote request — " + v("service"))
-      + "&body=" + encodeURIComponent(body);
+  /* ---------- quote forms: native POST to FormSubmit; just show sending state ---------- */
+  document.querySelectorAll(".quote-form").forEach(form => form.addEventListener("submit", () => {
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.textContent = "Sending…"; btn.style.opacity = ".7"; }
   }));
 
   /* ---------- footer year ---------- */

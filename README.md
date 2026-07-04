@@ -41,4 +41,4 @@ Upload everything (HTML files, `assets/`, `images/`) to any static host (GitHub 
 ## Before launch
 
 - The testimonials in the Reviews section are placeholders — swap in real customer reviews.
-- The quote form opens the visitor's email app (`mailto:`). For direct submissions, wire it to a form service (e.g. Formspree).
+- Quote forms POST to [FormSubmit](https://formsubmit.co/) and deliver straight to Coastlinetints@coastlinetints.com. **One-time activation required:** the first submission triggers a confirmation email to that inbox — click "Activate" in it and every later submission flows through. (After activation, FormSubmit also issues a random alias endpoint you can swap into the `action` attributes to keep the raw email address out of the page source.)

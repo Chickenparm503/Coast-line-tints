@@ -57,7 +57,12 @@ header{position:relative;z-index:100}
 }
 .nav-inner{width:min(1240px,94%);margin:0 auto;display:flex;align-items:center;gap:28px;height:74px}
 .logo{display:flex;align-items:center;gap:11px;font-family:var(--font-head);font-weight:800;font-size:1.22rem;letter-spacing:.04em}
-.logo svg{width:38px;height:38px;flex:none}
+.logo img{
+  width:46px;height:46px;flex:none;border-radius:50%;object-fit:cover;
+  border:1px solid rgba(47,212,230,.35);box-shadow:0 0 14px rgba(47,212,230,.18);
+  background:#000;
+}
+footer .logo img{width:54px;height:54px}
 .logo b{color:var(--text)}
 .logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .nav-links{display:flex;gap:26px;margin-left:auto;font-size:.94rem;font-weight:500;color:var(--muted)}

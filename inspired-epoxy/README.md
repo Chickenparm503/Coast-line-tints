@@ -1,33 +1,36 @@
 # Inspired Epoxy
 
-Multi-page static website for **Inspired Epoxy** — garage, metallic, basement & commercial epoxy flooring (inspiredepoxy.ca).
+Multi-page static website for **Inspired Epoxy** — epoxy flooring across the Lower Mainland, BC (inspiredepoxy.ca).
 
 Built to replace the marketer-controlled site so the business owns its own website. This folder is fully self-contained — copy it anywhere and it works.
 
 ## Pages
 
 - `index.html` — home: hero slideshow, quote box, services overview, stats, process, gallery preview, reviews, contact
-- `services.html` — in-depth Garage / Metallic / Basement / Commercial sections
-- `why-epoxy.html` — benefits, system comparison (flake/metallic/solid), prep-matters note, FAQ
+- `services.html` — all nine services: Flake, Metallic, Solid Colour, Quartz, Pebble/Stone, Grind & Seal, Concrete Polishing, Garage Makeovers, Slat Wall
+- `why-epoxy.html` — benefits, system comparison, prep-matters note, FAQ
 - `gallery.html` — full gallery with category tags and lightbox
 - `reviews.html` — customer review cards + service standards
 - `contact.html` — quote form, contact info, booking steps, quick FAQ
 - `thank-you.html` — form-submission confirmation page
 
-## ⚠️ Placeholders to confirm before launch
+## Confirmed from the real site
 
-The original inspiredepoxy.ca blocked automated access when this site was built, so the following are **stand-ins** — search-and-replace across all HTML files:
+- Phone: **(236) 233-1848**
+- Tagline / service area: durable, seamless epoxy floors for homes and businesses across the **Lower Mainland**
+- All nine services and their descriptions
+- Job photos (cropped from phone screenshots of the live site)
+
+## ⚠️ Still placeholder — confirm before launch
 
 | Item | Placeholder used | Replace with |
 |---|---|---|
-| Phone | `(604) 555-0123` / `tel:+16045550123` | Real phone number |
-| Email | `quotes@inspiredepoxy.ca` | Real email (also in form `action=` URLs) |
+| Email | `quotes@inspiredepoxy.ca` | Real email (also in the form `action=` URLs) |
 | Hours | Mon–Sat 8am–6pm | Real hours |
-| Service area | Lower Mainland & Fraser Valley, BC | Real service area |
 | Reviews | Sample reviews marked "Placeholder review" | Real Google reviews |
-| Images | Generated SVG artwork in `images/` | Real job photos (JPGs) |
+| Photos | Screenshot crops in `images/*.jpg` | Full-resolution originals of the same photos |
 
-Also confirm exact business name/wording, services offered, and any warranty claims (the copy mentions "warranty-backed installs" and "15+ years" — adjust to what the business actually offers).
+Also confirm any warranty/durability claims in the copy (e.g. "15+ years", "warranty-backed") match what the business actually offers.
 
 ## Features
 

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+  PLACEHOLDERS TO CONFIRM BEFORE LAUNCH (original site was unreachable):
+  · Phone number  — (604) 555-0123 is a stand-in, replace everywhere
+  · Email         — quotes@inspiredepoxy.ca is a stand-in, replace everywhere
+  · Hours         — Mon–Sat 8am–6pm is a stand-in
+  · Service area  — "Lower Mainland & Fraser Valley" is a stand-in
+  · Reviews       — sample reviews, swap for real Google reviews
+  · Images        — generated placeholder art in images/, swap for job photos
+============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inspired Epoxy | Epoxy Flooring — Garage, Basement, Commercial &amp; Metallic Floors</title>
+<meta name="description" content="Inspired Epoxy — professional epoxy flooring. Garage floors, metallic & designer floors, basements and commercial coatings with diamond-ground prep and warranty-backed installs. Free quotes.">
+<meta property="og:title" content="Inspired Epoxy — Professional Epoxy Flooring">
+<meta property="og:description" content="Garage, basement, metallic & commercial epoxy floors. Diamond-ground prep, premium coatings, free quotes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/metallic-copper.svg">
+<meta name="theme-color" content="#0b0806">
+<link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Inspired Epoxy",
+  "description": "Epoxy flooring — garage floors, metallic and designer floors, basements and commercial coatings.",
+  "telephone": "+1-604-555-0123",
+  "email": "quotes@inspiredepoxy.ca",
+  "url": "https://inspiredepoxy.ca",
+  "address": { "@type": "PostalAddress", "addressRegion": "BC", "addressCountry": "CA" },
+  "areaServed": ["Lower Mainland", "Fraser Valley"],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00", "closes": "18:00"
+  }],
+  "priceRange": "$$"
+}
+</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="bg-aurora" aria-hidden="true"></div>
+<div id="bgfx" aria-hidden="true"><canvas></canvas></div>
+
+<header>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html" aria-label="Inspired Epoxy home">
+        <img src="images/logo-icon.svg" alt="Inspired Epoxy logo">
+        <div><b>INSPIRED</b> <span>EPOXY</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="why-epoxy.html">Why Epoxy</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a class="nav-call" href="tel:+16045550123">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        (604) 555-0123
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="why-epoxy.html">Why Epoxy</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a class="nav-call" href="tel:+16045550123">Call (604) 555-0123</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero" aria-label="Inspired Epoxy highlights">
+    <div class="slide active">
+      <div class="slide-img" style="background-image:url('images/metallic-copper.svg')"></div>
+      <div class="slide-content">
+        <span class="slide-kicker">Garage · Basement · Commercial</span>
+        <h1 class="h1">Concrete Floors, <em>Reimagined.</em></h1>
+        <p>Inspired Epoxy turns tired, dusty concrete into seamless, high-gloss floors that shrug off oil, salt and traffic — in garages, basements, shops and showrooms.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">Get a Free Quote</a>
+          <a class="btn btn-ghost" href="#gallery">See Our Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-img" style="background-image:url('images/flake-grey.svg')"></div>
+      <div class="slide-content">
+        <span class="slide-kicker">Garage &amp; Shop Floors</span>
+        <p class="h1" role="heading" aria-level="2">Your Garage, <em>Showroom Ready.</em></p>
+        <p>Full-flake systems with a polyaspartic top coat — hot-tire proof, oil wipes right off, and most garages are done in as little as a day.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">Book Your Garage</a>
+          <a class="btn btn-ghost" href="tel:+16045550123">Call (604) 555-0123</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-img" style="background-image:url('images/commercial.svg')"></div>
+      <div class="slide-content">
+        <span class="slide-kicker">Commercial &amp; Industrial</span>
+        <p class="h1" role="heading" aria-level="2">Built For <em>Heavy Traffic.</em></p>
+        <p>Warehouses, shops, kitchens and retail floors that stand up to forklifts, chemicals and constant foot traffic — and stay easy to clean.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">Get a Free Assessment</a>
+          <a class="btn btn-ghost" href="#services">Explore Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-quote">
+      <div class="hero-quote-inner">
+        <form class="quote-form quote-card" action="https://formsubmit.co/quotes@inspiredepoxy.ca" method="POST" aria-label="Quick quote request">
+            <input type="hidden" name="_subject" value="New quote request — Inspired Epoxy website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Inspired Epoxy! We've received your quote request and will get back to you shortly — usually the same day. Need us sooner? Call or text (604) 555-0123. — Inspired Epoxy">
+            <input type="hidden" name="_next" value="https://inspiredepoxy.ca/thank-you.html">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <h3>Get a <em>Free Quote</em></h3>
+          <p class="quote-sub">Tell us about your floor — we usually reply the same day.</p>
+          <div class="field"><input type="text" name="name" autocomplete="name" placeholder="Your name" aria-label="Name" required></div>
+          <div class="field"><input type="tel" name="phone" autocomplete="tel" placeholder="Phone number" aria-label="Phone"></div>
+          <div class="field"><input type="email" name="email" autocomplete="email" placeholder="Email (for instant confirmation)" aria-label="Email"></div>
+          <div class="field">
+            <select name="service" aria-label="Service">
+              <option>Garage / shop floor</option>
+              <option>Metallic / designer floor</option>
+              <option>Basement or interior</option>
+              <option>Commercial / industrial</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><textarea name="message" rows="2" placeholder="Approx. square footage or floor details…" aria-label="Details" style="min-height:64px"></textarea></div>
+          <button class="btn btn-primary" type="submit">Request My Free Quote</button>
+          <span class="quote-alt">Or call <a href="tel:+16045550123">(604) 555-0123</a></span>
+        </form>
+      </div>
+    </div>
+    <div class="hero-nav">
+      <div class="hero-nav-inner">
+        <div class="dots" id="heroDots" role="tablist" aria-label="Slides"></div>
+        <div class="arrows">
+          <button class="arrow" id="prevSlide" aria-label="Previous slide">&#8592;</button>
+          <button class="arrow" id="nextSlide" aria-label="Next slide">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <span><i>◆</i> Metallic &amp; Flake Systems</span>
+      <span><i>◆</i> 100% Solids Epoxy</span>
+      <span><i>◆</i> Polyaspartic Top Coats</span>
+      <span><i>◆</i> Diamond-Ground Prep</span>
+      <span><i>◆</i> 1-Day Garage Floors</span>
+      <span><i>◆</i> Free Quotes</span>
+      <span><i>◆</i> Warranty-Backed Installs</span>
+    </div>
+  </div>
+
+  <!-- ================= QUICK QUOTE (mobile/tablet) ================= -->
+  <section class="quote-sec" id="quote">
+    <div class="container">
+      <form class="quote-form quote-card reveal" action="https://formsubmit.co/quotes@inspiredepoxy.ca" method="POST" aria-label="Quick quote request">
+            <input type="hidden" name="_subject" value="New quote request — Inspired Epoxy website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Inspired Epoxy! We've received your quote request and will get back to you shortly — usually the same day. Need us sooner? Call or text (604) 555-0123. — Inspired Epoxy">
+            <input type="hidden" name="_next" value="https://inspiredepoxy.ca/thank-you.html">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <h3>Get a <em>Free Quote</em></h3>
+        <p class="quote-sub">Tell us about your floor — we usually reply the same day.</p>
+        <div class="field"><input type="text" name="name" autocomplete="name" placeholder="Your name" aria-label="Name" required></div>
+        <div class="field"><input type="tel" name="phone" autocomplete="tel" placeholder="Phone number" aria-label="Phone"></div>
+          <div class="field"><input type="email" name="email" autocomplete="email" placeholder="Email (for instant confirmation)" aria-label="Email"></div>
+        <div class="field">
+          <select name="service" aria-label="Service">
+            <option>Garage / shop floor</option>
+            <option>Metallic / designer floor</option>
+            <option>Basement or interior</option>
+            <option>Commercial / industrial</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><textarea name="message" rows="2" placeholder="Approx. square footage or floor details…" aria-label="Details" style="min-height:64px"></textarea></div>
+        <button class="btn btn-primary" type="submit">Request My Free Quote</button>
+        <span class="quote-alt">Or call <a href="tel:+16045550123">(604) 555-0123</a></span>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <span class="kicker">What We Do</span>
+        <h2>Floors For <em>Every Space You Own</em></h2>
+        <p>From single garages to full warehouses, we match the right coating system to the job — durability, chemistry and style included.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card reveal" style="--d:.05s">
+          <div class="svc-img"><img src="images/flake-grey.svg" alt="Grey full-flake epoxy garage floor with glossy finish" loading="lazy"></div>
+          <div class="svc-body">
+            <h3>Garage &amp; Shop</h3>
+            <p>Full-flake epoxy with a polyaspartic top coat. Hot-tire proof, hides dust and dirt, and turns your garage into the best-looking room in the house.</p>
+            <a class="svc-link" href="services.html#garage">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="svc-card reveal" style="--d:.12s">
+          <div class="svc-img"><img src="images/metallic-copper.svg" alt="Copper metallic epoxy floor with flowing swirl pattern" loading="lazy"></div>
+          <div class="svc-body">
+            <h3>Metallic &amp; Designer</h3>
+            <p>One-of-a-kind metallic pours that move like liquid stone. Showrooms, offices, man-caves — no two floors are ever the same.</p>
+            <a class="svc-link" href="services.html#metallic">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="svc-card reveal" style="--d:.19s">
+          <div class="svc-img"><img src="images/metallic-ocean.svg" alt="Ocean blue metallic epoxy floor in a finished basement" loading="lazy"></div>
+          <div class="svc-body">
+            <h3>Basements &amp; Interiors</h3>
+            <p>Warmer than tile, tougher than laminate and completely waterproof — the smart finished floor for basements, laundry rooms and rec spaces.</p>
+            <a class="svc-link" href="services.html#basement">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="svc-card reveal" style="--d:.26s">
+          <div class="svc-img"><img src="images/commercial.svg" alt="Glossy commercial epoxy warehouse floor with reflections" loading="lazy"></div>
+          <div class="svc-body">
+            <h3>Commercial &amp; Industrial</h3>
+            <p>High-build systems for warehouses, kitchens, retail and mechanical rooms. Chemical-resistant, forklift-ready and easy to keep clean.</p>
+            <a class="svc-link" href="services.html#commercial">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY EPOXY ================= -->
+  <section class="stats" id="why">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <span class="kicker">Why Epoxy</span>
+        <h2>More Than <em>A Pretty Floor</em></h2>
+        <p>A properly installed coating protects your concrete and pays for itself in durability and easy cleaning — every single day.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat reveal" style="--d:.05s"><b><span class="count" data-to="4">0</span>×</b><span class="cap">tougher than bare concrete</span></div>
+        <div class="stat reveal" style="--d:.12s"><b><span class="count" data-to="24">0</span>hr</b><span class="cap">typical walk-on time after top coat</span></div>
+        <div class="stat reveal" style="--d:.19s"><b><span class="count" data-to="15">0</span>+</b><span class="cap">years of performance with proper prep</span></div>
+        <div class="stat reveal" style="--d:.26s"><b><span class="count" data-to="100">0</span>%</b><span class="cap">seamless, easy-clean surface</span></div>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit reveal" style="--d:.05s">
+          <div class="benefit-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3.5v5c0 4.7-3.4 8.3-8 9.5-4.6-1.2-8-4.8-8-9.5v-5L12 3z"/></svg></div>
+          <h4>Tough As Nails</h4>
+          <p>Impacts, dropped tools, hot tires, road salt and chemicals — a professional-grade coating takes the abuse so your concrete doesn't.</p>
+        </div>
+        <div class="benefit reveal" style="--d:.12s">
+          <div class="benefit-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3C12 3 5 11 5 15.5a7 7 0 0 0 14 0C19 11 12 3 12 3z"/></svg></div>
+          <h4>Spills Wipe Off</h4>
+          <p>Oil, paint, pet accidents — nothing soaks in. One seamless surface with no grout lines, cracks or carpet to trap dirt.</p>
+        </div>
+        <div class="benefit reveal" style="--d:.19s">
+          <div class="benefit-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+          <h4>Brightens Your Space</h4>
+          <p>A high-gloss floor reflects light and can make garages and basements dramatically brighter with the same bulbs.</p>
+        </div>
+        <div class="benefit reveal" style="--d:.26s">
+          <div class="benefit-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg></div>
+          <h4>Seals &amp; Protects</h4>
+          <p>Coatings seal concrete against moisture, salt and freeze-thaw damage — protecting the slab and adding real value to your home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section id="process">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <span class="kicker">Our Process</span>
+        <h2>Floors That Last Start <em>With Prep</em></h2>
+        <p>Coatings fail when prep is skipped. We never skip it. Here's how we do it.</p>
+      </div>
+      <div class="proc-grid">
+        <article class="proc-card reveal" style="--d:.05s">
+          <div class="proc-img"><span class="proc-num">01</span><img src="images/prep-grind.svg" alt="Diamond-ground concrete surface prepared for coating" loading="lazy"></div>
+          <div class="proc-body">
+            <h3>Diamond Grind &amp; Repair</h3>
+            <p>We mechanically grind the slab to open the pores, then fix cracks, pits and spalls — so the coating bonds to the concrete permanently.</p>
+          </div>
+        </article>
+        <article class="proc-card reveal" style="--d:.12s">
+          <div class="proc-img"><span class="proc-num">02</span><img src="images/base-coat.svg" alt="Glossy epoxy base coat being rolled over prepared concrete" loading="lazy"></div>
+          <div class="proc-body">
+            <h3>Base Coat</h3>
+            <p>A 100% solids epoxy base is rolled on and worked into the profile — the structural layer that gives the system its strength.</p>
+          </div>
+        </article>
+        <article class="proc-card reveal" style="--d:.19s">
+          <div class="proc-img"><span class="proc-num">03</span><img src="images/flake-broadcast.svg" alt="Decorative flake broadcast over a fresh epoxy coat" loading="lazy"></div>
+          <div class="proc-body">
+            <h3>Broadcast &amp; Top Coat</h3>
+            <p>Flake or metallic effects go down, then a UV-stable clear top coat locks it all in. Walk on it the next day, park on it within days.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <!-- NOTE: placeholder artwork — swap in real job photos before launch -->
+  <section id="gallery">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <span class="kicker">Recent Work</span>
+        <h2>The <em>Inspired Look</em></h2>
+      </div>
+      <div class="gal-grid">
+        <figure class="gal-item reveal" style="--d:.03s"><img src="images/metallic-copper.svg" alt="Copper metallic epoxy floor" loading="lazy"><figcaption class="gal-cap">Copper metallic pour</figcaption></figure>
+        <figure class="gal-item reveal" style="--d:.08s"><img src="images/flake-grey.svg" alt="Grey full-flake garage floor" loading="lazy"><figcaption class="gal-cap">Full-flake garage</figcaption></figure>
+        <figure class="gal-item reveal" style="--d:.13s"><img src="images/metallic-ocean.svg" alt="Ocean blue metallic epoxy floor" loading="lazy"><figcaption class="gal-cap">Ocean metallic basement</figcaption></figure>
+        <figure class="gal-item reveal" style="--d:.18s"><img src="images/flake-tan.svg" alt="Tan and cream designer flake floor" loading="lazy"><figcaption class="gal-cap">Designer flake blend</figcaption></figure>
+        <figure class="gal-item reveal" style="--d:.23s"><img src="images/metallic-silver.svg" alt="Silver pewter metallic epoxy floor" loading="lazy"><figcaption class="gal-cap">Pewter metallic showroom</figcaption></figure>
+        <figure class="gal-item reveal" style="--d:.28s"><img src="images/commercial.svg" alt="Glossy commercial warehouse epoxy floor" loading="lazy"><figcaption class="gal-cap">Commercial warehouse</figcaption></figure>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:42px">
+        <a class="btn btn-ghost" href="gallery.html">View the Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <!-- NOTE: placeholder reviews — swap in real customer reviews (e.g. from Google) before launch -->
+  <section class="testi" id="reviews">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <span class="kicker">Reviews</span>
+        <h2>Homeowners &amp; Businesses <em>Trust Us</em></h2>
+      </div>
+      <div class="testi-slider reveal" id="testiSlider">
+        <div class="testi-slide active">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"They ground, patched and coated our double garage in a day and a half. Six months in it still looks brand new — oil drips wipe up with a paper towel."</blockquote>
+          <cite>Placeholder review <small>Garage floor</small></cite>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"We went with a metallic floor for the basement instead of vinyl plank. Everyone who comes over asks about it — it honestly looks like polished marble."</blockquote>
+          <cite>Placeholder review <small>Metallic basement floor</small></cite>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Our shop floor takes forklifts, dropped parts and brake fluid all week. Best money we've spent on the building — and they worked around our hours."</blockquote>
+          <cite>Placeholder review <small>Commercial shop floor</small></cite>
+        </div>
+        <div class="testi-dots" id="testiDots" role="tablist" aria-label="Reviews"></div>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:46px">
+        <a class="btn btn-ghost" href="reviews.html">Read More Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Ready for a floor that inspires?</h2>
+          <p>Free quotes. Honest advice. Floors that last.</p>
+        </div>
+        <a class="btn btn-primary" href="tel:+16045550123">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Call (604) 555-0123
+        </a>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card reveal">
+          <div class="info-row">
+            <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div>
+            <div><b>Phone</b><a href="tel:+16045550123">(604) 555-0123</a><p>Call or text for the fastest response</p></div>
+          </div>
+          <div class="info-row">
+            <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <div><b>Email</b><a href="mailto:quotes@inspiredepoxy.ca">quotes@inspiredepoxy.ca</a></div>
+          </div>
+          <div class="info-row">
+            <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+            <div><b>Hours</b><span>Monday–Saturday · 8:00am–6:00pm<br>Sunday · Closed</span></div>
+          </div>
+          <div class="info-row">
+            <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+            <div><b>Service Area</b><span>Lower Mainland &amp; Fraser Valley, BC</span></div>
+          </div>
+        </div>
+
+        <div class="card reveal" style="--d:.12s">
+          <form class="quote-form" action="https://formsubmit.co/quotes@inspiredepoxy.ca" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New quote request — Inspired Epoxy website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Inspired Epoxy! We've received your quote request and will get back to you shortly — usually the same day. Need us sooner? Call or text (604) 555-0123. — Inspired Epoxy">
+            <input type="hidden" name="_next" value="https://inspiredepoxy.ca/thank-you.html">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-row">
+              <div class="field">
+                <label for="fName">Name</label>
+                <input id="fName" name="name" type="text" autocomplete="name" required placeholder="Your name">
+              </div>
+              <div class="field">
+                <label for="fPhone">Phone</label>
+                <input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="(604) 555-0123">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="fEmail">Email</label>
+                <input id="fEmail" name="email" type="email" autocomplete="email" placeholder="you@email.com">
+              </div>
+              <div class="field">
+                <label for="fService">Service</label>
+                <select id="fService" name="service">
+                  <option>Garage / shop floor</option>
+                  <option>Metallic / designer floor</option>
+                  <option>Basement or interior</option>
+                  <option>Commercial / industrial</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="fMsg">Details</label>
+              <textarea id="fMsg" name="message" placeholder="Approx. square footage, current floor condition, or anything else we should know…"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Request My Free Quote</button>
+            <p class="form-note">Your request goes straight to our inbox — or just call us at (604) 555-0123.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Inspired Epoxy home">
+          <img src="images/logo-icon.svg" alt="Inspired Epoxy logo">
+          <div><b>INSPIRED</b> <span>EPOXY</span></div>
+        </a>
+        <p>Professional epoxy flooring for garages, basements, shops and businesses across the Lower Mainland and Fraser Valley.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-epoxy.html">Why Epoxy</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><a href="tel:+16045550123">(604) 555-0123</a></li>
+          <li><a href="mailto:quotes@inspiredepoxy.ca">quotes@inspiredepoxy.ca</a></li>
+          <li><span>Mon–Sat · 8am–6pm</span></li>
+          <li><span>Sunday · Closed</span></li>
+          <li><span>Lower Mainland &amp; Fraser Valley, BC</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Inspired Epoxy</span>
+      <span>Garage · Metallic · Basement · Commercial</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

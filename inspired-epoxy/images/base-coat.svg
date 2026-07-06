@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Rolling a glossy epoxy base coat over prepared concrete">
+<defs>
+<linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#56534e"/><stop offset="1" stop-color="#6e6a63"/></linearGradient>
+<filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="5" seed="14"/>
+<feColorMatrix type="matrix" values="0 0 0 0 .34  0 0 0 0 .32  0 0 0 0 .29  0 0 0 .8 -.22"/></filter>
+<linearGradient id="ep" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5c2f0d"/><stop offset=".45" stop-color="#b0621c"/><stop offset=".7" stop-color="#e08a2e"/><stop offset="1" stop-color="#7a4212"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#c)"/>
+<rect width="1600" height="1000" filter="url(#n)" opacity=".5"/>
+<path d="M0 1000 L0 430 Q240 360 480 420 Q760 490 1010 430 Q1290 365 1600 470 L1600 1000 Z" fill="url(#ep)"/>
+<path d="M0 1000 L0 470 Q240 400 480 460 Q760 530 1010 470 Q1290 405 1600 510 L1600 1000 Z" fill="#000" opacity=".12"/>
+<rect x="330" y="430" width="130" height="570" fill="url(#sh)" opacity=".5" transform="skewX(-5)"/>
+<rect x="900" y="430" width="110" height="570" fill="url(#sh)" opacity=".4" transform="skewX(-5)"/>
+<g transform="rotate(18 1150 330)"><rect x="1090" y="180" width="26" height="310" rx="12" fill="#23272c"/><rect x="1020" y="440" width="170" height="64" rx="30" fill="#e6952f"/><rect x="1020" y="440" width="170" height="26" rx="13" fill="#fff" opacity=".22"/></g>
+</svg>

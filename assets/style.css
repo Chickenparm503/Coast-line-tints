@@ -70,6 +70,21 @@ footer .logo img{width:54px;height:54px}
 .nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--grad);transition:right .3s}
 .nav-links a:hover{color:var(--text)}
 .nav-links a:hover::after{right:0}
+.nav-drop{position:relative}
+.nav-drop-panel{
+  position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);
+  min-width:200px;padding:8px;border-radius:14px;border:1px solid rgba(47,212,230,.3);
+  background:var(--bg2);box-shadow:0 20px 45px rgba(0,0,0,.45);
+  display:flex;flex-direction:column;gap:2px;
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,transform .2s;
+}
+.nav-drop:hover .nav-drop-panel,.nav-drop:focus-within .nav-drop-panel{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0);
+}
+.nav-drop-panel a{padding:9px 14px;border-radius:8px;font-size:.92rem;white-space:nowrap}
+.nav-drop-panel a::after{display:none}
+.nav-drop-panel a:hover{background:rgba(47,212,230,.12)}
+.mobile-menu a.mobile-sub{font-size:1.08rem;padding:6px 12px;color:var(--dim);margin-top:-6px}
 .nav-call{
   display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border-radius:999px;
   background:var(--grad);color:#04222b;font-weight:700;font-size:.93rem;letter-spacing:.02em;
@@ -120,8 +135,13 @@ footer .logo img{width:54px;height:54px}
 .slide.active .slide-content>*:nth-child(2){animation-delay:.12s}
 .slide.active .slide-content>*:nth-child(3){animation-delay:.24s}
 .slide.active .slide-content>*:nth-child(4){animation-delay:.36s}
+.slide.active .slide-content>*:nth-child(5){animation-delay:.48s}
 @keyframes rise{to{opacity:1;transform:none}}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-strip{display:flex;flex-wrap:wrap;gap:0;margin-top:26px;font-size:.86rem;color:var(--muted);letter-spacing:.01em}
+.hero-strip span{position:relative;padding:0 14px}
+.hero-strip span:first-child{padding-left:0}
+.hero-strip span+span::before{content:"|";position:absolute;left:0;color:var(--accent);opacity:.5}
 .btn{
   display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;
   font-weight:700;font-size:1rem;font-family:var(--font-head);letter-spacing:.02em;

@@ -65,12 +65,13 @@ header{position:relative;z-index:100}
 footer .logo img{width:54px;height:54px}
 .logo b{color:var(--text)}
 .logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.nav-links{display:flex;gap:26px;margin-left:auto;font-size:.94rem;font-weight:500;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:26px;margin-left:auto;font-size:.94rem;font-weight:500;color:var(--muted)}
 .nav-links a{position:relative;padding:6px 0;transition:color .25s}
 .nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--grad);transition:right .3s}
 .nav-links a:hover{color:var(--text)}
 .nav-links a:hover::after{right:0}
-.nav-drop{position:relative}
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-drop::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px}
 .nav-drop-panel{
   position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);
   min-width:200px;padding:8px;border-radius:14px;border:1px solid rgba(47,212,230,.3);

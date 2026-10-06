@@ -1,0 +1,127 @@
+/* ============ Commutes drive-time widget (Contact page only) ============ */
+.commutes-section{padding-top:24px}
+.commutes-section .sec-head{margin-bottom:40px}
+
+.hide{display:none !important}
+
+.commutes{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  background:var(--bg2);min-height:480px;
+}
+.commutes-map{position:relative;background:var(--bg3)}
+.commutes-map .map-view{position:absolute;inset:0;width:100%;height:100%}
+
+.commutes-info{display:flex;flex-direction:column;padding:36px;position:relative}
+
+/* ---- initial state ---- */
+.commutes-initial-state{
+  flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:18px;
+}
+.commutes-initial-state svg{flex:none}
+.commutes-initial-state .description .heading{font-size:1.5rem;margin-bottom:8px}
+.commutes-initial-state .description p{color:var(--muted);font-size:.96rem}
+
+.add-button{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;
+  background:var(--grad);color:#04222b;font-weight:700;font-size:.92rem;font-family:var(--font-head);
+  border:none;cursor:pointer;transition:transform .25s,box-shadow .25s;box-shadow:var(--glow);
+}
+.add-button:hover{transform:translateY(-2px);box-shadow:0 0 36px rgba(47,212,230,.5)}
+.add-button svg{fill:#04222b;flex:none}
+
+/* ---- destinations state ---- */
+.commutes-destinations{flex:1;display:flex;flex-direction:column;position:relative}
+.destinations-container{
+  position:relative;display:flex;flex-direction:column;gap:14px;flex:1;
+}
+.destination-list{
+  display:flex;flex-direction:row;gap:12px;overflow-x:auto;scroll-behavior:smooth;
+  padding-bottom:4px;padding-left:44px;padding-right:44px;
+  -ms-overflow-style:none;scrollbar-width:none;
+}
+.destination-list::-webkit-scrollbar{display:none}
+
+.destination-card{
+  flex:none;width:260px;display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;
+  border:1px solid var(--line);background:var(--bg3);
+}
+.destination-card .dest-icon{
+  flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(47,212,230,.12);color:var(--accent);
+}
+.destination-card .dest-icon svg{width:20px;height:20px;fill:currentColor}
+.destination-card .dest-body{flex:1;min-width:0}
+.destination-card .dest-address{font-weight:600;font-size:.94rem;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.destination-card .dest-duration{color:var(--accent2);font-size:.86rem;font-weight:600;margin-top:2px}
+.destination-card .dest-edit{
+  flex:none;width:34px;height:34px;border-radius:50%;border:none;background:transparent;
+  color:var(--muted);cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s;
+}
+.destination-card .dest-edit:hover{background:rgba(255,255,255,.06);color:var(--accent)}
+.destination-card .dest-edit svg{width:17px;height:17px;fill:currentColor}
+
+.commutes-destinations .add-button{align-self:flex-start;margin-top:14px}
+.commutes-destinations .add-button .label{white-space:nowrap}
+
+.left-control,.right-control{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--line);
+  background:var(--bg2);color:var(--text);cursor:pointer;display:grid;place-items:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+.left-control{left:2px}
+.right-control{right:2px}
+.left-control svg,.right-control svg{width:18px;height:18px;fill:currentColor}
+
+/* ---- modal ---- */
+.commutes-modal-container{
+  position:fixed;inset:0;z-index:200;background:rgba(7,11,17,.7);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.commutes-modal-container.open{opacity:1;pointer-events:auto}
+.commutes-modal{
+  width:min(440px,92vw);border-radius:18px;border:1px solid rgba(47,212,230,.3);
+  background:var(--bg2);box-shadow:0 30px 70px rgba(0,0,0,.5);
+  transform:translateY(16px);transition:transform .25s;
+}
+.commutes-modal-container.open .commutes-modal{transform:translateY(0)}
+.commutes-modal .content{padding:30px}
+.commutes-modal .heading{font-size:1.25rem;margin-bottom:18px}
+#destination-form{display:flex;flex-direction:column;gap:14px}
+#destination-address-input{
+  width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--line);
+  background:var(--bg3);color:var(--text);font-family:var(--font-body);font-size:.96rem;
+}
+#destination-address-input:focus{outline:none;border-color:var(--accent)}
+.error-message{color:#ff8080;font-size:.86rem;min-height:1em}
+
+.travel-modes{display:flex;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.travel-modes input[type="radio"]{position:absolute;opacity:0;pointer-events:none}
+.travel-modes label{
+  flex:1;display:flex;align-items:center;justify-content:center;padding:12px 0;cursor:pointer;
+  color:var(--muted);border-left:1px solid var(--line);transition:background .2s,color .2s;
+}
+.travel-modes label.left-label,.travel-modes label:first-of-type{border-left:none}
+.travel-modes label svg{width:20px;height:20px;fill:currentColor}
+.travel-modes input[type="radio"]:checked + label{background:rgba(47,212,230,.14);color:var(--accent)}
+.travel-modes input[type="radio"]:focus-visible + label{outline:2px solid var(--accent);outline-offset:-2px}
+
+.modal-action-bar{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}
+.modal-action-bar button{
+  padding:11px 20px;border-radius:999px;font-family:var(--font-head);font-weight:700;font-size:.9rem;
+  border:none;cursor:pointer;transition:transform .2s,opacity .2s;
+}
+.cancel-button{background:transparent;color:var(--muted);border:1px solid var(--line) !important}
+.cancel-button:hover{color:var(--text)}
+.delete-destination-button{background:transparent;color:#ff8080;border:1px solid rgba(255,128,128,.35) !important;margin-right:auto}
+.delete-destination-button:hover{background:rgba(255,128,128,.08)}
+.add-destination-button,.edit-destination-button{background:var(--grad);color:#04222b;box-shadow:var(--glow)}
+.add-destination-button:hover,.edit-destination-button:hover{transform:translateY(-1px)}
+
+@media (max-width:880px){
+  .commutes{grid-template-columns:1fr}
+  .commutes-map{min-height:260px}
+  .commutes-info{padding:28px 22px}
+}

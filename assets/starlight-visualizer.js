@@ -3,7 +3,7 @@
 const photo=document.getElementById('sl-photo'), canvas=document.getElementById('sl-stars'), ctx=canvas.getContext('2d');
 const range=document.getElementById('sl-count'), output=document.getElementById('sl-output'), radios=[...document.querySelectorAll('[name="sl-roof"]')];
 const status=document.getElementById('sl-status');
-const params=new URLSearchParams(location.search);let count=Number(params.get('stars')||1000);count=Number.isFinite(count)?Math.max(300,Math.min(2200,Math.round(count/50)*50)):1000;
+const params=new URLSearchParams(location.search);let count=Number(params.get('stars')||1000);count=Number.isFinite(count)?Math.max(300,Math.min(2200,Math.round(count/100)*100)):1000;
 let roof=params.get('roof')==='sunroof'?'sunroof':'solid';range.value=count;radios.forEach(r=>r.checked=r.value===roof);
 function inside(x,y,poly){let hit=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const a=poly[i],b=poly[j];if((a[1]>y)!=(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;}
 // Normalized roof boundaries exclude glass, roof fixtures, pillars and trim.

@@ -1,0 +1,19 @@
+(() => {
+'use strict';
+const photo=document.getElementById('sl-photo'), canvas=document.getElementById('sl-stars'), ctx=canvas.getContext('2d');
+const range=document.getElementById('sl-count'), output=document.getElementById('sl-output'), radios=[...document.querySelectorAll('[name="sl-roof"]')];
+const status=document.getElementById('sl-status');
+const params=new URLSearchParams(location.search);let count=Number(params.get('stars')||1000);count=Number.isFinite(count)?Math.max(300,Math.min(2200,Math.round(count/50)*50)):1000;
+let roof=params.get('roof')==='sunroof'?'sunroof':'solid';range.value=count;radios.forEach(r=>r.checked=r.value===roof);
+function inside(x,y,poly){let hit=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const a=poly[i],b=poly[j];if((a[1]>y)!=(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;}
+// Normalized roof boundaries exclude glass, roof fixtures, pillars and trim.
+const masks={solid:{outer:[[.015,.008],[.985,.008],[.985,.273],[.79,.315],[.685,.385],[.325,.385],[.22,.315],[.015,.273]],holes:[[[.415,.299],[.556,.299],[.556,.327],[.415,.327]],[[.185,.304],[.286,.304],[.286,.349],[.185,.349]],[[.707,.295],[.807,.295],[.807,.343],[.707,.343]],[[.475,.365],[.56,.365],[.56,.4],[.475,.4]]]},sunroof:{outer:[[.012,.008],[.988,.008],[.988,.32],[.855,.43],[.758,.597],[.248,.597],[.145,.43],[.012,.32]],holes:[[[.19,.201],[.32,.176],[.81,.176],[.759,.428],[.704,.564],[.321,.564],[.25,.407]],[[.078,.343],[.138,.343],[.17,.408],[.119,.427]],[[.843,.341],[.902,.341],[.875,.417],[.818,.413]],[[.144,.408],[.191,.421],[.211,.464],[.165,.463]],[[.806,.42],[.852,.41],[.838,.461],[.789,.467]],[[.258,.541],[.30,.541],[.303,.577],[.265,.577]]]}};
+function points(mode){let seed=79271;function random(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;}const m=masks[mode],p=[];for(let tries=0;p.length<2200&&tries<100000;tries++){let x=random(),y=random()*.61;if(inside(x,y,m.outer)&&!m.holes.some(h=>inside(x,y,h)))p.push([x,y,.45+random()*.45,.5+random()*.5]);}return p;}
+const fields={solid:points('solid'),sunroof:points('sunroof')};
+function draw(){const w=canvas.clientWidth,h=canvas.clientHeight,dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);for(const [x,y,size,alpha] of fields[roof].slice(0,count)){const r=size*Math.max(.65,w/1100);ctx.beginPath();ctx.fillStyle=`rgba(218,232,255,${alpha})`;ctx.shadowColor='#9fbaff';ctx.shadowBlur=3;ctx.arc(x*w,y*h,r,0,Math.PI*2);ctx.fill();}ctx.shadowBlur=0;}
+function setupURL(){const url=new URL(location.href);url.searchParams.set('stars',count);url.searchParams.set('roof',roof);url.hash='starlight-preview';return url;}
+function update(){count=Number(range.value);roof=radios.find(r=>r.checked).value;output.value=count.toLocaleString();range.setAttribute('aria-valuetext',count.toLocaleString()+' stars');const label=roof==='solid'?'No sunroof':'With sunroof';document.getElementById('sl-scene-label').textContent=count.toLocaleString()+' stars · '+label;photo.alt='Nighttime interior preview: '+count+' stars, '+label.toLowerCase();if(photo.dataset.roof!==roof){photo.src=window.starlightInteriors[roof];photo.dataset.roof=roof;}draw();}
+range.addEventListener('input',update);radios.forEach(r=>r.addEventListener('change',update));new ResizeObserver(draw).observe(canvas);photo.addEventListener('load',draw);
+document.getElementById('sl-share').addEventListener('click',async()=>{const url=setupURL().href;try{await navigator.clipboard.writeText(url);status.textContent='Link copied — your star count and roof choice are included.';}catch(e){const field=document.getElementById('sl-share-url');field.hidden=false;field.value=url;field.select();status.textContent='Copy this link to share your setup.';}});
+update();
+})();

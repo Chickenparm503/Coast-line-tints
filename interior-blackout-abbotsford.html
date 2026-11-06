@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interior Blackout Packages | Coastline Customs Abbotsford</title>
+<meta name="description" content="Transform your interior with black suede headliners and trim blackout packages at Coastline Customs in Abbotsford, BC. Starting at $1,000.">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.blackout-page{max-width:1100px;margin:0 auto;padding:110px 20px 70px;color:#f4f5f7;font-family:Inter,Arial,sans-serif}
+.blackout-page h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.1}.blackout-page h2{font-size:clamp(1.5rem,4vw,2.4rem)}
+.blackout-page p,.blackout-page li{line-height:1.7;color:#c8ced8}.blackout-page .eyebrow{letter-spacing:.16em;text-transform:uppercase;color:#89b8e7;font-size:.8rem}
+.blackout-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:35px 0}
+.blackout-card{background:#111b29;border:1px solid #304158;border-radius:18px;padding:24px}
+.blackout-price{font-size:2rem;font-weight:800;color:white}.blackout-btn{display:inline-block;padding:13px 22px;border-radius:9px;background:#d8e9ff;color:#07101d;text-decoration:none;font-weight:700}
+.blackout-compare{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:14px;background:#1a2432;border:1px solid #394b60}
+.blackout-compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.blackout-compare .after{clip-path:inset(0 50% 0 0)}
+.blackout-compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:3}
+.blackout-compare .line{position:absolute;left:50%;top:0;bottom:0;width:3px;background:white;pointer-events:none;z-index:2}
+.blackout-labels{display:flex;justify-content:space-between;font-size:.85rem;color:#d6e4f2;margin:8px 0 20px}
+.blackout-note{padding:20px;border:1px dashed #53667c;border-radius:12px;background:#121c28;color:#cbd5e1}
+@media(max-width:720px){.blackout-grid{grid-template-columns:1fr}.blackout-page{padding-top:90px}}
+</style></head>
+<body style="background:#070b11">
+<main class="blackout-page">
+<p><a href="index.html" style="color:#a6d0ff">← Coastline Customs</a></p>
+<p class="eyebrow">Coastline Customs · Abbotsford BC</p>
+<h1>Transform your interior.</h1>
+<p>From factory grey or beige to a refined all-black finish. Complete interior blackout packages starting at $1,000.</p>
+<h2>Two ways to go black.</h2>
+<div class="blackout-grid">
+<section class="blackout-card"><h3>Base Blackout</h3><p class="blackout-price">Starting at $1,000</p><ul><li>Black suede headliner</li><li>Pillars refinished black</li><li>Applicable interior trim refinished black</li></ul><p>Clean, coordinated blackout finish.</p></section>
+<section class="blackout-card"><h3>Premium Blackout</h3><p class="blackout-price">Starting at $1,400</p><ul><li>Black suede headliner</li><li>Pillars wrapped in black suede</li><li>Grab handles, sun visors and remaining applicable trim refinished black</li></ul><p>Extra suede texture for a premium look.</p></section>
+</div>
+<h2>See the transformation</h2>
+<p>Volkswagen Jetta example. Each package will have a matching-angle swipe comparison, plus a headliner material close-up. Premium will also show a suede pillar close-up.</p>
+<div class="blackout-note"><strong>Photo comparisons awaiting matched images.</strong> The swipe component is prepared, but no before/after imagery is published here yet. Actual installation photos or clearly labelled illustrative concepts are needed to avoid misleading customers.</div>
+<h2>Make it yours</h2><p>Add starlight headliner lighting to either package. Pricing depends on vehicle and selected options.</p>
+<a class="blackout-btn" href="contact.html">Request a Quote</a>
+</main>
+<script>
+function setupBlackoutComparison(el){const range=el.querySelector('input'),after=el.querySelector('.after'),line=el.querySelector('.line');if(!range||!after||!line)return;function update(){const p=Number(range.value);after.style.clipPath='inset(0 '+(100-p)+'% 0 0)';line.style.left=p+'%'}range.addEventListener('input',update);update()}
+document.querySelectorAll('.blackout-compare').forEach(setupBlackoutComparison);
+</script></body></html>
